@@ -119,9 +119,19 @@ chmod -R 755 chroma-data
 
 ### 步驟 6: 構建並啟動容器
 
+**方法 1: 使用自動部署腳本 (推薦)**
+
 ```bash
-# 構建 Docker 映像
-docker compose -f docker-compose.prod.yml build
+# 使用提供的部署腳本
+chmod +x deploy-to-vps.sh
+./deploy-to-vps.sh
+```
+
+**方法 2: 手動部署**
+
+```bash
+# 重要: 必須使用 --no-cache 確保依賴正確安裝
+docker compose -f docker-compose.prod.yml build --no-cache
 
 # 啟動服務
 docker compose -f docker-compose.prod.yml up -d
@@ -129,6 +139,16 @@ docker compose -f docker-compose.prod.yml up -d
 # 查看日誌
 docker compose -f docker-compose.prod.yml logs -f
 ```
+
+**⚠️ 常見問題: `ModuleNotFoundError: No module named 'langchain_core.pydantic_v1'`**
+
+如果遇到此錯誤,請確保:
+1. 使用 `--no-cache` 重新構建: `docker compose -f docker-compose.prod.yml build --no-cache`
+2. 確認 `poetry.lock` 文件已正確上傳到 VPS
+3. 清理舊的 Docker 映像: `docker rmi patent-rag-system-django-app`
+4. 重新構建並啟動
+
+或直接使用提供的 `deploy-to-vps.sh` 腳本,它會自動處理這些問題。
 
 ### 步驟 7: 初始化系統
 
