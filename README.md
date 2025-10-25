@@ -42,6 +42,7 @@ GOOGLE_API_KEY=your-google-api-key-here
 
 ### 2. 啟動服務
 
+**開發環境 (本地測試)**:
 ```bash
 # 啟動所有容器
 docker-compose up -d
@@ -49,6 +50,35 @@ docker-compose up -d
 # 查看日誌
 docker-compose logs -f django-app
 ```
+
+**生產環境 (VPS 部署)**:
+```bash
+# 重要: 必須使用 --no-cache 確保依賴正確安裝
+docker compose -f docker-compose.prod.yml build --no-cache
+
+# 啟動服務 (運行在 port 8002)
+docker compose -f docker-compose.prod.yml up -d
+
+# 查看日誌
+docker compose -f docker-compose.prod.yml logs -f django-app
+```
+
+**⚠️ 常見問題**: 如果遇到 `ModuleNotFoundError: No module named 'langchain_core.pydantic_v1'` 錯誤:
+```bash
+# 1. 停止容器
+docker compose -f docker-compose.prod.yml down
+
+# 2. 清理舊映像
+docker rmi patent-rag-system-django-app
+
+# 3. 重新構建 (必須使用 --no-cache)
+docker compose -f docker-compose.prod.yml build --no-cache
+
+# 4. 啟動服務
+docker compose -f docker-compose.prod.yml up -d
+```
+
+詳細部署說明請參考 [DEPLOYMENT.md](DEPLOYMENT.md)
 
 ### 3. 初始化系統
 
