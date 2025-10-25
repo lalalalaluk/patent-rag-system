@@ -189,7 +189,7 @@ exit
    - **Domain Names**: `your-domain.com` (或你的網域)
    - **Scheme**: `http`
    - **Forward Hostname / IP**: `專案所在VPS的IP` 或 `localhost` (如果 NPM 在同一台機器)
-   - **Forward Port**: `8001`
+   - **Forward Port**: `8002`
    - **Cache Assets**: 開啟
    - **Block Common Exploits**: 開啟
    - **Websockets Support**: 開啟
@@ -209,7 +209,7 @@ exit
 
 ```bash
 # 本地測試
-curl http://localhost:8001/api/health/
+curl http://localhost:8002/api/health/
 
 # 透過網域測試
 curl https://your-domain.com/api/health/
@@ -331,8 +331,8 @@ docker compose -f docker-compose.prod.yml logs
 # 檢查 .env.prod 是否正確
 cat .env.prod
 
-# 檢查 8001 port 是否被佔用
-netstat -tulpn | grep 8001
+# 檢查 8002 port 是否被佔用
+netstat -tulpn | grep 8002
 ```
 
 ### 2. ChromaDB 連接失敗
@@ -387,15 +387,15 @@ docker compose -f docker-compose.prod.yml restart django-app
 # 檢查防火牆
 ufw status
 
-# 如果需要開放 8000 port
-ufw allow 8000
+# 如果需要開放 8002 port
+ufw allow 8002
 
 # 檢查 Nginx Proxy Manager 設定
-# 確認 Forward Port 設為 8000
+# 確認 Forward Port 設為 8002
 # 確認 Forward Hostname 正確
 
 # 測試本地連接
-curl http://localhost:8001/api/health/
+curl http://localhost:8002/api/health/
 ```
 
 ## 🔐 安全建議
@@ -417,7 +417,7 @@ ufw allow 22
 ufw allow 80
 ufw allow 443
 
-# 不要直接開放 8001 port (由 Nginx Proxy Manager 代理)
+# 不要直接開放 8002 port (由 Nginx Proxy Manager 代理)
 
 # 啟用防火牆
 ufw enable
