@@ -12,12 +12,15 @@
 
 ## 🚀 快速部署步驟
 
-### 步驟 1: 連接到 VPS
+### 步驟 1: 連接到 VPS 並準備目錄
 
 ```bash
 ssh root@your-vps-ip
 # 或
 ssh your-username@your-vps-ip
+
+# 建立 /var/www 目錄（如果不存在）
+mkdir -p /var/www
 ```
 
 ### 步驟 2: 安裝 Docker (如果尚未安裝)
@@ -39,8 +42,8 @@ docker compose version
 ### 步驟 3: 克隆專案到 VPS
 
 ```bash
-# 切換到適合的目錄
-cd /opt
+# 切換到 web 應用目錄
+cd /var/www
 
 # 克隆專案 (請替換成你的 Git repository URL)
 git clone https://your-repo-url/patent-rag-system.git
@@ -49,7 +52,7 @@ cd patent-rag-system
 # 或者使用 rsync 從本地傳輸
 # 在本地執行:
 # rsync -avz --exclude='data/' --exclude='db/' --exclude='chroma-data/' \
-#   /path/to/patent-rag-system/ root@your-vps-ip:/opt/patent-rag-system/
+#   /path/to/patent-rag-system/ root@your-vps-ip:/var/www/patent-rag-system/
 ```
 
 ### 步驟 4: 設定環境變數
@@ -186,7 +189,7 @@ exit
    - **Domain Names**: `your-domain.com` (或你的網域)
    - **Scheme**: `http`
    - **Forward Hostname / IP**: `專案所在VPS的IP` 或 `localhost` (如果 NPM 在同一台機器)
-   - **Forward Port**: `8000`
+   - **Forward Port**: `8001`
    - **Cache Assets**: 開啟
    - **Block Common Exploits**: 開啟
    - **Websockets Support**: 開啟
@@ -206,7 +209,7 @@ exit
 
 ```bash
 # 本地測試
-curl http://localhost:8000/api/health/
+curl http://localhost:8001/api/health/
 
 # 透過網域測試
 curl https://your-domain.com/api/health/
@@ -220,7 +223,7 @@ curl https://your-domain.com/api/health/
 ### 查看服務狀態
 
 ```bash
-cd /opt/patent-rag-system
+cd /var/www/patent-rag-system
 docker compose -f docker-compose.prod.yml ps
 ```
 
@@ -276,7 +279,7 @@ docker compose -f docker-compose.prod.yml down -v
 ### 備份資料庫
 
 ```bash
-cd /opt/patent-rag-system
+cd /var/www/patent-rag-system
 
 # 備份 SQLite 資料庫
 tar -czf backup_db_$(date +%Y%m%d).tar.gz db/
@@ -311,7 +314,7 @@ docker compose -f docker-compose.prod.yml start
 crontab -e
 
 # 添加每天凌晨 2 點備份
-0 2 * * * cd /opt/patent-rag-system && tar -czf /backup/patent_rag_$(date +\%Y\%m\%d).tar.gz db/ data/ chroma-data/
+0 2 * * * cd /var/www/patent-rag-system && tar -czf /backup/patent_rag_$(date +\%Y\%m\%d).tar.gz db/ data/ chroma-data/
 
 # 添加每週清理 30 天前的備份
 0 3 * * 0 find /backup -name "patent_rag_*.tar.gz" -mtime +30 -delete
@@ -328,8 +331,8 @@ docker compose -f docker-compose.prod.yml logs
 # 檢查 .env.prod 是否正確
 cat .env.prod
 
-# 檢查 8000 port 是否被佔用
-netstat -tulpn | grep 8000
+# 檢查 8001 port 是否被佔用
+netstat -tulpn | grep 8001
 ```
 
 ### 2. ChromaDB 連接失敗
@@ -392,7 +395,7 @@ ufw allow 8000
 # 確認 Forward Hostname 正確
 
 # 測試本地連接
-curl http://localhost:8000/api/health/
+curl http://localhost:8001/api/health/
 ```
 
 ## 🔐 安全建議
@@ -414,7 +417,7 @@ ufw allow 22
 ufw allow 80
 ufw allow 443
 
-# 不要直接開放 8000 port (由 Nginx Proxy Manager 代理)
+# 不要直接開放 8001 port (由 Nginx Proxy Manager 代理)
 
 # 啟用防火牆
 ufw enable
