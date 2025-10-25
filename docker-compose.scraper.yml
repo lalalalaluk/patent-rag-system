@@ -1,0 +1,12 @@
+services:
+  scraper:
+    build: .
+    network_mode: "host"
+    volumes:
+      - .:/app
+      - ./data:/app/data
+    env_file:
+      - .env.scraper
+    command: tail -f /dev/null  # 保持容器運行
+    stdin_open: true
+    tty: true

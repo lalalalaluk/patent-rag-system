@@ -1,0 +1,30 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/Users/luk/Desktop/program/yoru-signup-company/patent-rag-system/logs/.c2a8c93ebaffd8aded500bc9b8b53100cd9f6ca2-audit.json",
+    "files": [
+        {
+            "date": 1760974551094,
+            "name": "/Users/luk/Desktop/program/yoru-signup-company/patent-rag-system/logs/mcp-puppeteer-2025-10-20.log",
+            "hash": "72f0d4df5628faa06cfbc725efb10d8fad1c6ba2ed8f33ca63f2ff8bcc277f4c"
+        },
+        {
+            "date": 1761059110375,
+            "name": "/Users/luk/Desktop/program/yoru-signup-company/patent-rag-system/logs/mcp-puppeteer-2025-10-21.log",
+            "hash": "a2b1127292c3616cc15274e6cad7b7b7a9a3d4087e8deb6411eff5fcdb8ccd9c"
+        },
+        {
+            "date": 1761230179668,
+            "name": "/Users/luk/Desktop/program/yoru-signup-company/patent-rag-system/logs/mcp-puppeteer-2025-10-23.log",
+            "hash": "aebf0f963926cb9f421ff5425828cd29d2bc946c817c90ebdaa8f455e081d494"
+        },
+        {
+            "date": 1761316658297,
+            "name": "/Users/luk/Desktop/program/yoru-signup-company/patent-rag-system/logs/mcp-puppeteer-2025-10-24.log",
+            "hash": "fd4c229a27812589a99dd449dd55d125c50259c6e0e28eb1c8e842b6589abd1b"
+        }
+    ],
+    "hashType": "sha256"
+}

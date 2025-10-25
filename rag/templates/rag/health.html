@@ -1,0 +1,41 @@
+{% extends "rag/base.html" %}
+
+{% block title %}系統狀態 - 台灣專利搜尋系統{% endblock %}
+
+{% block content %}
+<div class="health-section">
+    <h2>🏥 系統健康狀態</h2>
+
+    <div class="status-card {% if status == 'healthy' %}status-healthy{% else %}status-error{% endif %}">
+        <h3>狀態: {{ status|upper }}</h3>
+    </div>
+
+    {% if vector_db_stats %}
+    <div class="stats-grid">
+        <div class="stat-card">
+            <h4>📊 總專利數</h4>
+            <p class="stat-value">{{ vector_db_stats.total_documents }}</p>
+        </div>
+
+        <div class="stat-card">
+            <h4>🗂️ Collection</h4>
+            <p class="stat-value">{{ vector_db_stats.collection_name }}</p>
+        </div>
+
+        <div class="stat-card">
+            <h4>📐 向量維度</h4>
+            <p class="stat-value">{{ vector_db_stats.embedding_dimension }}</p>
+        </div>
+
+        <div class="stat-card">
+            <h4>🤖 Embedding 模型</h4>
+            <p class="stat-value">{{ vector_db_stats.embedding_model }}</p>
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="action-buttons">
+        <a href="{% url 'index' %}" class="btn-secondary">返回查詢頁面</a>
+    </div>
+</div>
+{% endblock %}

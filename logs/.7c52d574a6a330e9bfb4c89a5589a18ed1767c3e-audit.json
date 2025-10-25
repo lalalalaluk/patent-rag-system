@@ -1,0 +1,25 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/Users/luk/Desktop/program/yoru-signup-company/python-rag-system/logs/.7c52d574a6a330e9bfb4c89a5589a18ed1767c3e-audit.json",
+    "files": [
+        {
+            "date": 1760578213716,
+            "name": "/Users/luk/Desktop/program/yoru-signup-company/python-rag-system/logs/mcp-puppeteer-2025-10-16.log",
+            "hash": "98064998359095b5a2bd4b643b79d9009fa3b18f31318ce78d004a6283931e23"
+        },
+        {
+            "date": 1760801788870,
+            "name": "/Users/luk/Desktop/program/yoru-signup-company/python-rag-system/logs/mcp-puppeteer-2025-10-18.log",
+            "hash": "1b6ace2cab89e795e6db269d81f5dc93adf225ad22f6fdf7f3ca0e40a1322e52"
+        },
+        {
+            "date": 1760864167026,
+            "name": "/Users/luk/Desktop/program/yoru-signup-company/python-rag-system/logs/mcp-puppeteer-2025-10-19.log",
+            "hash": "f26f97dc81ce909da9eb3339a51766631230e294fe44413469435293c4b754f9"
+        }
+    ],
+    "hashType": "sha256"
+}

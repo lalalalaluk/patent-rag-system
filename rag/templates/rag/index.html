@@ -1,0 +1,150 @@
+{% extends "rag/base.html" %}
+
+{% block content %}
+<div class="query-section">
+    <h2>台灣專利搜尋系統</h2>
+
+    <form method="POST" action="{% url 'query_page' %}" class="query-form" id="queryForm">
+        {% csrf_token %}
+        <div class="form-group">
+            <textarea
+                name="question"
+                id="question"
+                rows="4"
+                placeholder="例如: 請找出與人工智慧相關的專利"
+                required
+            >{{ question }}</textarea>
+        </div>
+        <button type="submit" class="btn-primary" id="submitBtn">搜尋專利</button>
+    </form>
+
+    <!-- Loading 動畫 -->
+    <div id="loadingSection" class="loading-section" style="display: none;">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">
+            <h3>🔍 正在搜尋專利資料庫...</h3>
+            <p id="loadingMessage">向量檢索中</p>
+        </div>
+    </div>
+
+    {% if answer %}
+    <div class="result-section">
+        <h3>💡 回答</h3>
+        <div class="answer-box">
+            {{ answer|linebreaks }}
+        </div>
+
+        {% if sources %}
+        <h3>📚 相關專利</h3>
+        <div class="sources-list">
+            {% for source in sources %}
+            <div class="source-item">
+                <h4>{{ source.title }}</h4>
+                {% if source.patent_number %}
+                <p class="source-section">
+                    <strong>專利號:</strong>
+                    <span class="patent-number">{{ source.patent_number }}</span>
+                    <a href="https://tiponet.tipo.gov.tw/S092_OUT/out"
+                       target="_blank"
+                       class="patent-link"
+                       title="前往 TIPO 專利公開資訊查詢系統查詢此專利">
+                        查詢完整專利 🔗
+                    </a>
+                </p>
+                {% endif %}
+                {% if source.applicant %}
+                <p class="source-section"><strong>申請人:</strong> {{ source.applicant }}</p>
+                {% endif %}
+                {% if source.ipc_classification %}
+                <p class="source-section"><strong>IPC分類:</strong> {{ source.ipc_classification }}</p>
+                {% endif %}
+                <p class="source-section"><strong>類別:</strong> {{ source.section }}</p>
+                <p class="source-excerpt">{{ source.excerpt }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <div class="response-time">
+            ⏱️ 回應時間: {{ response_time_ms }}ms
+        </div>
+    </div>
+    {% endif %}
+
+    {% if error %}
+    <div class="error-box">
+        ❌ 錯誤: {{ error }}
+    </div>
+    {% endif %}
+</div>
+
+<div class="examples-section">
+    <h3>💡 範例搜尋</h3>
+    <div class="examples-grid">
+        <button class="example-btn" onclick="fillQuestion('請找出與人工智慧相關的專利')">
+            人工智慧專利
+        </button>
+        <button class="example-btn" onclick="fillQuestion('請找出與半導體製程相關的專利')">
+            半導體製程
+        </button>
+        <button class="example-btn" onclick="fillQuestion('請找出與電池技術相關的專利')">
+            電池技術
+        </button>
+        <button class="example-btn" onclick="fillQuestion('請找出與5G通訊相關的專利')">
+            5G通訊技術
+        </button>
+        <button class="example-btn" onclick="fillQuestion('請找出與物聯網相關的專利')">
+            物聯網應用
+        </button>
+        <button class="example-btn" onclick="fillQuestion('請找出與醫療器材相關的專利')">
+            醫療器材
+        </button>
+    </div>
+</div>
+
+<script>
+function fillQuestion(question) {
+    document.getElementById('question').value = question;
+}
+
+// Loading animation on form submit
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('queryForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const loadingSection = document.getElementById('loadingSection');
+    const loadingMessage = document.getElementById('loadingMessage');
+
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            // Show loading section
+            loadingSection.style.display = 'block';
+
+            // Disable submit button
+            submitBtn.disabled = true;
+            submitBtn.style.opacity = '0.6';
+            submitBtn.style.cursor = 'not-allowed';
+
+            // Scroll to loading section
+            loadingSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            // Progressive loading messages
+            const messages = [
+                '向量檢索中...',
+                '分析專利文件...',
+                '使用 AI 生成回答...',
+                '整理專利資訊...'
+            ];
+
+            let msgIndex = 0;
+            const msgInterval = setInterval(function() {
+                msgIndex = (msgIndex + 1) % messages.length;
+                loadingMessage.textContent = messages[msgIndex];
+            }, 3000);
+
+            // Store interval ID to clear it if needed
+            form.dataset.loadingInterval = msgInterval;
+        });
+    }
+});
+</script>
+{% endblock %}

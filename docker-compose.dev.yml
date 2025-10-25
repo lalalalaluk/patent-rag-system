@@ -1,0 +1,44 @@
+# 開發環境專用：只啟動服務，Django 在本機運行
+services:
+  chromadb:
+    image: chromadb/chroma:0.4.24
+    volumes:
+      - chroma-data:/chroma/chroma
+    ports:
+      - "8001:8000"
+    environment:
+      - IS_PERSISTENT=TRUE
+      - ANONYMIZED_TELEMETRY=False
+    networks:
+      - rag-network
+
+  postgres:
+    image: postgres:15-alpine
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=rag_db
+      - POSTGRES_USER=raguser
+      - POSTGRES_PASSWORD=ragpass
+    ports:
+      - "5432:5432"
+    networks:
+      - rag-network
+
+  redis:
+    image: redis:7-alpine
+    volumes:
+      - redis-data:/data
+    ports:
+      - "6379:6379"
+    networks:
+      - rag-network
+
+volumes:
+  chroma-data:
+  postgres-data:
+  redis-data:
+
+networks:
+  rag-network:
+    driver: bridge

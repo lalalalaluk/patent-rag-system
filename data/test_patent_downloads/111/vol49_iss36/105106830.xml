@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE tw-patent-grant SYSTEM "invention.dtd">
+
+<tw-patent-grant dtd-version="A103.1.0">
+  <tw-bibliographic-data-grant>
+    <volno>49</volno>
+    <isuno>36</isuno>
+    <kindcode>B</kindcode>
+    <publication-reference>
+      <document-id>
+        <doc-number>I787147</doc-number>
+        <kind/>
+        <date>111/12/21</date>
+      </document-id>
+    </publication-reference>
+    <certificate-number>
+      <document-id>
+        <doc-number>I787147</doc-number>
+        <kind/>
+        <date/>
+      </document-id>
+    </certificate-number>
+    <application-reference appl-type="invention">
+      <document-id>
+        <doc-number>105106830</doc-number>
+        <kind/>
+        <date>105/03/04</date>
+      </document-id>
+    </application-reference>
+    <classification-ipc>
+      <main-classification edition="201801120221018V">C09J7/20</main-classification>
+      <further-classification edition="200601120221018V">C09J183/04</further-classification>
+      <further-classification edition="200601120221018V">C09J11/06</further-classification>
+      <further-classification edition="200601120221018V">H01L21/683</further-classification>
+      <further-classification edition="200601120221018V">H01L21/78</further-classification>
+      <further-classification edition="201001120221018V">H01L33/00</further-classification>
+      <further-classification edition="201001120221018V">H01L33/50</further-classification>
+    </classification-ipc>
+    <parties>
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook>
+            <chinese-name name-type="">
+              <last-name>荷蘭商露明控股公司</last-name>
+              <first-name></first-name>
+            </chinese-name>
+            <english-name name-type="">
+              <last-name>LUMILEDS HOLDING B.V.</last-name>
+              <middle-name/>
+              <first-name/>
+            </english-name>
+            <address></address>
+            <english-country>NL</english-country>
+            <english-address>NL</english-address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" app-type="applicant">
+          <addressbook>
+            <chinese-name name-type="">
+              <last-name>史契克　阿波羅</last-name>
+              <first-name></first-name>
+            </chinese-name>
+            <english-name name-type="">
+              <last-name>SCHRICKER, APRIL</last-name>
+              <middle-name></middle-name>
+              <first-name></first-name>
+            </english-name>
+            <address></address>
+            <english-country>US</english-country>
+            <english-address>US</english-address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" app-type="applicant">
+          <addressbook>
+            <chinese-name name-type="">
+              <last-name>凡　李斯特　尼克</last-name>
+              <first-name></first-name>
+            </chinese-name>
+            <english-name name-type="">
+              <last-name>VAN LETH, NIEK</last-name>
+              <middle-name></middle-name>
+              <first-name></first-name>
+            </english-name>
+            <address></address>
+            <english-country>NL</english-country>
+            <english-address>NL</english-address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" app-type="applicant">
+          <addressbook>
+            <chinese-name name-type="">
+              <last-name>洛伊特曼　丹尼爾</last-name>
+              <first-name></first-name>
+            </chinese-name>
+            <english-name name-type="">
+              <last-name>ROITMAN, DANIEL</last-name>
+              <middle-name></middle-name>
+              <first-name></first-name>
+            </english-name>
+            <address></address>
+            <english-country>US</english-country>
+            <english-address>US</english-address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="agent">
+          <addressbook>
+            <chinese-name name-type="">
+              <last-name>林嘉興</last-name>
+              <first-name></first-name>
+            </chinese-name>
+            <address>臺北市</address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <examiners>
+      <examiner>
+        <chinese-name>
+          <last-name>吳韶淳</last-name>
+          <first-name/>
+        </chinese-name>
+      </examiner>
+    </examiners>
+    <priority-claims>
+      <priority-claim sequence="1">
+        <country>美國</country>
+        <doc-number>62/129,282</doc-number>
+        <date>20150306</date>
+      </priority-claim>
+    </priority-claims>
+    <tw-bio-deposit/>
+    <invention-title>
+      <chinese-title>用於提供陶瓷磷光板至發光裝置（ＬＥＤ）晶粒之方法、用於切割或傳送陶瓷磷光板之帶、放置陶瓷磷光板於帶上之方法、及使用帶之方法</chinese-title>
+      <english-title>METHODS FOR PROVIDING CERAMIC PHOSPHOR PLATES TO LIGHT-EMITTING DEVICE (LED) DIES, TAPES FOR DICING OR TRANSFERRING OF CERAMIC PHOSPHOR PLATES, METHODS FOR PLACING A CERAMIC PHOSPHOR PLATE ONTO A TAPE, AND METHODS FOR USING A TAPE</english-title>
+    </invention-title>
+    <refs>
+      <ref>
+        <country>TW</country>
+        <doc-number>201414018</doc-number>
+        <kind>A</kind>
+      </ref>
+      <ref>
+        <country>US</country>
+        <doc-number>2013/0062646</doc-number>
+        <kind>A1</kind>
+      </ref>
+    </refs>
+    <application-publication-reference>
+      <document-id>
+        <doc-number>201708459</doc-number>
+        <kind/>
+        <date>106/03/01</date>
+      </document-id>
+    </application-publication-reference>
+  </tw-bibliographic-data-grant>
+  <drawings num="第1圖"> 
+    <figure> 
+      <img align="absmiddle" height="293px" width="622px" file="d10001.TIF" alt="圖式ed10001.png" img-content="tif" img-format="tif" orientation="portrait" inline="yes" giffile="ed10001.png"></img> 
+    </figure>  
+    <figure> 
+      <img align="absmiddle" height="261px" width="620px" file="d10002.TIF" alt="圖式ed10002.png" img-content="tif" img-format="tif" orientation="portrait" inline="yes" giffile="ed10002.png"></img> 
+    </figure>  
+    <figure> 
+      <img align="absmiddle" height="282px" width="635px" file="d10003.TIF" alt="圖式ed10003.png" img-content="tif" img-format="tif" orientation="portrait" inline="yes" giffile="ed10003.png"></img> 
+    </figure>  
+    <figure> 
+      <img align="absmiddle" height="294px" width="495px" file="d10004.TIF" alt="圖式ed10004.png" img-content="tif" img-format="tif" orientation="portrait" inline="yes" giffile="ed10004.png"></img> 
+    </figure>  
+    <figure> 
+      <img align="absmiddle" height="247px" width="495px" file="d10005.TIF" alt="圖式ed10005.png" img-content="tif" img-format="tif" orientation="portrait" inline="yes" giffile="ed10005.png"></img> 
+    </figure>  
+    <figure> 
+      <img align="absmiddle" height="165px" width="496px" file="d10006.TIF" alt="圖式ed10006.png" img-content="tif" img-format="tif" orientation="portrait" inline="yes" giffile="ed10006.png"></img> 
+    </figure>  
+    <figure> 
+      <img align="absmiddle" height="309px" width="499px" file="d10007.TIF" alt="圖式ed10007.png" img-content="tif" img-format="tif" orientation="portrait" inline="yes" giffile="ed10007.png"></img> 
+    </figure>  
+    <figure> 
+      <img align="absmiddle" height="850px" width="594px" file="d10008.TIF" alt="圖式ed10008.png" img-content="tif" img-format="tif" orientation="portrait" inline="yes" giffile="ed10008.png"></img> 
+    </figure>  
+    <drawing-description> 
+      <p type="p">在圖式中：</p>  
+      <p type="p">圖1圖解說明藉由安裝至一帶框之一切割帶固持之一陶瓷磷光體之一橫截面視圖。</p>  
+      <p type="p">圖2圖解說明本發明之實例中之具有一支撐薄膜及支撐薄膜上方之一無丙烯酸膠黏層之一切割帶之一橫截面視圖。</p>  
+      <p type="p">圖3圖解說明本發明之實例中之具有另一切割帶及另一切割帶上之一無丙烯酸膠黏層之一切割帶之一橫截面視圖。</p>  
+      <p type="p">圖4係本發明之實例中之提供陶瓷磷光板至LED晶粒之一方法之一流程圖。</p>  
+      <p type="p">圖5係本發明之實例中之藉由圖4之方法中之刮塗或覆模鑄造(over-mold casting)提供膠黏層之一方法之一流程圖。</p>  
+      <p type="p">圖6係本發明之實例中之藉由圖4之方法中之擠壓提供膠黏層之一方法之一流程圖。</p>  
+      <p type="p">圖7係本發明之實例中之藉由貼合提供膠黏層之一方法之一流程圖。</p>  
+      <p type="p">圖8展示本發明之實例中之藉由圖7之方法實施一貼合程序之橫截面視圖。</p>  
+      <p type="p">在不同圖式中使用相同元件符號指示類似或相同元件。</p> 
+    </drawing-description> 
+  </drawings>
+  <claims>
+    <claim id="clm1" num="1"> 
+      <p type="claim">一種用於提供陶瓷磷光板至發光裝置(LED)晶粒之方法，其包括：施配(dispensing)一液體材料於一切割帶之一支撐薄膜或另一膠黏層上以形成無丙烯酸(acrylic-free)且無含有金屬之觸媒之一膠黏層(tacky layer)；將一陶瓷磷光體(ceramic phosphor)放置在該切割帶(dicing tape)之無丙烯酸(acrylic-free)且無含有金屬之觸媒之該膠黏層上；將於該切割帶上之該陶瓷磷光體切割成該等陶瓷磷光板；自該切割帶移除該等陶瓷磷光板；及將該等陶瓷磷光板附接在該等發光裝置(LED)晶粒上。</p> 
+    </claim>
+    <claim id="clm2" num="2"> 
+      <p type="claim">如請求項1之方法，其中無丙烯酸且無含有金屬之觸媒之該膠黏層包括無丙烯酸及鉑之一聚矽氧熱成型樹脂及無包括鉑、錫或鋅之含有金屬之一觸媒。</p> 
+    </claim>
+    <claim id="clm3" num="3"> 
+      <p type="claim">如請求項1之方法，其中將該切割帶安裝在一帶框上。</p> 
+    </claim>
+    <claim id="clm4" num="4"> 
+      <p type="claim">如請求項1之方法，其中：無丙烯酸且無含有金屬之觸媒之該膠黏層包括一光潛或光起始胺觸媒；且移除該等陶瓷磷光板包括使無丙烯酸且無含有金屬之觸媒之該膠黏層光顯影以降低其對該等陶瓷磷光板之黏著力。</p> 
+    </claim>
+    <claim id="clm5" num="5"> 
+      <p type="claim">如請求項1之方法，其中將該等陶瓷磷光板附接在該等發光裝置(LED)晶粒上包含將高折射率(HRI)之基於聚矽氧之一膠施加在該等發光裝置(LED)晶粒上。</p> 
+    </claim>
+    <claim id="clm6" num="6"> 
+      <p type="claim">如請求項1之方法，其中該另一膠黏層包括丙烯酸。</p> 
+    </claim>
+    <claim id="clm7" num="7"> 
+      <p type="claim">如請求項1之方法，進一步包括藉由以下方法來形成該切割帶：將該液體材料刮塗在該支撐薄膜或該另一膠黏層上，以形成該膠黏層。</p> 
+    </claim>
+    <claim id="clm8" num="8"> 
+      <p type="claim">如請求項1之方法，進一步包括藉由以下方法來形成該切割帶：將該液體材料覆模在該支撐薄膜或該另一膠黏層上，以形成該膠黏層。</p> 
+    </claim>
+    <claim id="clm9" num="9"> 
+      <p type="claim">如請求項1之方法，進一步包括藉由以下方法來形成該切割帶：透過一捲輪式薄膜輸送程序，將該膠黏層擠壓在該切割帶之一支撐薄膜或該支撐薄膜上之另一膠黏層上。</p> 
+    </claim>
+    <claim id="clm10" num="10"> 
+      <p type="claim">如請求項1之方法，其中將該陶瓷磷光體安裝在該切割帶之該無丙烯酸膠黏層上包括：將一膠黏薄膜貼合於該切割帶之一支撐薄膜或該支撐薄膜上之另一膠黏層上，以形成該膠黏層，且將該陶瓷磷光體放置在該膠黏層上；或在該相同程序中，將該陶瓷磷光體及該膠黏薄膜貼合於該支撐薄膜或該另一膠黏層上。</p> 
+    </claim>
+    <claim id="clm11" num="11"> 
+      <p type="claim">一種用於切割或傳送(transfer)陶瓷磷光板之帶，其包括：一支撐薄膜；及安置在該支撐薄膜上之一膠黏層，其為無丙烯酸及為無含有金屬之觸媒，該膠黏層經組態以形成與一陶瓷磷光板之一黏著力(adhesive bond)。</p> 
+    </claim>
+    <claim id="clm12" num="12"> 
+      <p type="claim">如請求項11之帶，其中該膠黏層無包括鉑、錫或鋅之含有金屬之一觸媒。</p> 
+    </claim>
+    <claim id="clm13" num="13"> 
+      <p type="claim">如請求項11之帶，其中與該陶瓷磷光板之該黏著力可被調變。</p> 
+    </claim>
+    <claim id="clm14" num="14"> 
+      <p type="claim">如請求項13之帶，其中與該陶瓷磷光板之該黏著力係藉由光顯影該膠黏層調變。</p> 
+    </claim>
+    <claim id="clm15" num="15"> 
+      <p type="claim">如請求項13之帶，其中該膠黏層包括一光潛或光起始胺觸媒，其經組態以當該膠黏層光顯影時，降低至該陶瓷磷光板的該黏著力。</p> 
+    </claim>
+    <claim id="clm16" num="16"> 
+      <p type="claim">如請求項11之帶，其中該膠黏層係安置在該支撐薄膜之一第二膠黏層上，該第二膠黏層包括丙烯酸。</p> 
+    </claim>
+    <claim id="clm17" num="17"> 
+      <p type="claim">一種包括放置一陶瓷磷光板於請求項11所述之該帶上之方法，以致一黏著力形成在該陶瓷磷光板及該膠黏層之間。</p> 
+    </claim>
+    <claim id="clm18" num="18"> 
+      <p type="claim">如請求項17之方法，其包括自該帶移除該陶瓷磷光板。</p> 
+    </claim>
+    <claim id="clm19" num="19"> 
+      <p type="claim">一種使用一帶之方法，其包括：提供具有安置於一支撐薄膜上之一膠黏層之該帶，該膠黏層為無丙烯酸及為無含有金屬之觸媒；及放置一陶瓷磷光板於該帶之該膠黏層上，使得該膠黏層形成與該陶瓷磷光板之一黏著力。</p> 
+    </claim>
+    <claim id="clm20" num="20"> 
+      <p type="claim">如請求項19之方法，其包括自該帶移除該陶瓷磷光板。</p> 
+    </claim>
+    <claim id="clm21" num="21"> 
+      <p type="claim">如請求項19之方法，其中該膠黏層無包括鉑、錫或鋅之含有金屬之一觸媒。</p> 
+    </claim>
+    <claim id="clm22" num="22"> 
+      <p type="claim">如請求項20之方法，其包括在移除該陶瓷磷光板之前，調變與該陶瓷磷光板之該黏著力。</p> 
+    </claim>
+    <claim id="clm23" num="23"> 
+      <p type="claim">如請求項22之方法，其包括光顯影該膠黏層以調變與該陶瓷磷光板之該黏著力。</p> 
+    </claim>
+  </claims>
+</tw-patent-grant>

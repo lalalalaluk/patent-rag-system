@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "taiwan-patent-rag"
+version = "0.1.0"
+description = "RAG system for Taiwan patent search and Q&A"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^5.0"
+djangorestframework = "^3.14"
+chromadb = "^0.4.22"
+langchain = "*"
+langchain-google-genai = "*"
+langchain-community = "*"
+google-generativeai = "*"
+beautifulsoup4 = "^4.12"
+requests = "^2.31"
+python-dotenv = "^1.0"
+psycopg2-binary = "^2.9"
+redis = "^5.0"
+gunicorn = "^21.2"
+django-cors-headers = "^4.3"
+lxml = "^5.1"
+sentence-transformers = "^2.2.0"
+numpy = "^1.26.0,<2.0"
+playwright = "^1.40"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4"
+pytest-django = "^4.7"
+black = "^23.12"
+flake8 = "^7.0"
+ipython = "^8.18"
+pytest-cov = "^4.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+target-version = ['py311']
+include = '\.pyi?$'
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings"
+python_files = ["test_*.py", "*_test.py"]
+testpaths = ["tests"]
